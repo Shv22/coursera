@@ -14,7 +14,7 @@ function LCController($scope) {
   }
   function calculateItems(string) {
     var items = string.split(",")
-    if(items[0] == ""){              //checking for empty string
+    if(items[0] === ""){              //checking for empty string
       return "Please enter data first" ;
     }
     else if (items.length < 4) {
