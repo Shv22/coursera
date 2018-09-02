@@ -23,12 +23,9 @@ function foundItems() {
 
 function foundItemsDirectiveController() {
 	var list = this;
-	list.emptyList = function(){
-		if(list.length == 0)
-			return true
-		else
-			return false;
-	}
+	list.isEmpty = function() {
+      return list.found != undefined && list.found.length === 0;
+    }
 }
 
 NarrowItDownController.$inject = ['MenuSearchService'];
