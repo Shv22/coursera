@@ -1,0 +1,9 @@
+<div class='top-padding'>
+	<ol>
+		<li ng-repeat="item in list.found">
+          {{item.name}}, {{item.short_name}}, {{item.description}}
+          <button ng-click="list.onRemove({index: $index});">Remove Item</button>
+        </li>
+	</ol>
+	<div class="error" ng-if="list.emptyList(list.found)">Nothing Found</div>
+</div>
